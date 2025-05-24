@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV Header Violet BG</title>
+  <!-- Flowbite CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  
+  <!-- Font Awesome CDN -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    .icon-spacing {
+      margin-right: 0.5rem;
+      min-width: 20px;
+      text-align: center;
+    }
+   .custom-header-bg {
+    background-color: #208aba;
+    color: white;
+  }
+  .custom-icon-bg{
+    background-color: #13526f;
+    color: white;
+  }
+  </style>
+  <style>
+  .download-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px 20px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.back-btn{
+  bottom: 70px;
+}
+.download-btn i {
+  margin-right: 6px;
+}
+
+</style>
+
+</head>
+<body  class="p-6 mb-1 bg-sky-950text-white transition-colors duration-300" style="background-color: #082f49">
+<a href="MyCV.pdf" download class="download-btn">
+  <i class="fas fa-file-pdf"></i> Download CV
+</a>
+<a href="MyCV.pdf" download class="download-btn back-btn">
+  <i class="fas fa-arrow-left"></i> Back
+</a>
+
+ <header class="max-w-4xl mx-auto shadow-md rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-6" style="background-color: #208aba; color: #fff">
+  <!-- Left side: Profile pic + name -->
+  <div class="flex items-center gap-5 md:gap-8">
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile picture of John Doe" class="w-28 h-28 rounded-full object-cover border-2 border-violet-600" />
+    <div>
+      <h1 class="text-3xl font-bold">Eyerusalem Kindalem Getnet</h1>
+      <p class="mt-1 text-lg">Full Stack Developer</p>
+    </div>
+  </div>
+
+  <!-- Right side: Contact info -->
+  <div class="flex flex-col space-y-4">
+    <p class="flex items-center">
+      <i class="fas fa-envelope text-white text-lg icon-spacing"></i>
+      <span>eyukk@example.com</span>
+    </p>
+    <p class="flex items-center">
+      <i class="fas fa-phone text-white text-lg icon-spacing"></i>
+      <span>+251907363763</span>
+    </p>
+    <p class="flex items-center">
+      <i class="fas fa-map-marker-alt text-white text-lg icon-spacing"></i>
+      <span>Bahrdar, Ethiopia</span>
+    </p>
+  </div>
+</header>
+
+  
+<main
+  class="max-w-4xl mx-auto mt-8 bg-white rounded-lg shadow-md p-6
+         grid grid-cols-2 lg:grid-cols-2 gap-8"
+>
+  <!-- LEFT COLUMN ------------------------------------------------------->
+  <div class="flex flex-col gap-8">
+    <!-- Objective ------------------------------------------------------->
+    <section>
+      <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+    <i class="fas fa-bullseye"></i>
+  </span>
+  Objective
+</h2>
+
+      <p class="text-gray-700 leading-relaxed">
+  Motivated and dedicated professional eager to contribute to team success in a challenging, fast-paced environment. Committed to applying strong problem-solving skills, a solid work ethic, and a passion for continuous learning to drive meaningful and measurable outcomes.
+</p>
+
+    </section>
+     <!-- skills ------------------------------------------------------->
+<section>
+   <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+     <i class="fas fa-tools"></i>
+     </span>
+    Skills
+  </h2>
+  
+  <!-- Technical Skills -->
+  <div>
+    <h3 class="text-xl font-semibold text-blue-800 mb-1">Technical Skills</h3>
+    <div class="grid grid-cols-4 sm:grid-cols-4 gap-1 text-white mb-1">
+      <div class="flex flex-col items-center bg-blue-700 p-2 rounded-lg shadow-md">
+        <i class="fab fa-html5 text-4xl mb-2 text-orange-500"></i>
+        <span class="font-semibold">HTML5</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fab fa-css3-alt text-4xl mb-2 text-blue-400"></i>
+        <span class="font-semibold">CSS3</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fab fa-js-square text-4xl mb-2 text-yellow-400"></i>
+        <span class="font-semibold">JavaScript</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fab fa-node text-4xl mb-2 text-green-400"></i>
+        <span class="font-semibold">Node.js</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fab fa-react text-4xl mb-2 text-cyan-400"></i>
+        <span class="font-semibold">React</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-database text-4xl mb-2 text-indigo-400"></i>
+        <span class="font-semibold">Databases</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fab fa-php text-4xl mb-2 text-purple-600"></i>
+        <span class="font-semibold">PHP</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-code text-4xl mb-2 text-gray-300"></i>
+        <span class="font-semibold">Problem Solving</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Soft Skills -->
+  <div>
+    <h3 class="text-xl font-semibold text-blue-800 mb-1">Soft Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 text-white">
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-users text-4xl mb-2 text-yellow-300"></i>
+        <span class="font-semibold">Teamwork</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-lightbulb text-4xl mb-2 text-yellow-400"></i>
+        <span class="font-semibold">Creativity</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-5 rounded-lg shadow-md">
+        <i class="fas fa-comments text-4xl mb-2 text-green-300"></i>
+        <span class="font-semibold">Communication</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-clock text-4xl mb-2 text-red-400"></i>
+        <span class="font-semibold">Time Management</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-brain text-4xl mb-2 text-purple-400"></i>
+        <span class="font-semibold">Critical Thinking</span>
+      </div>
+      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+        <i class="fas fa-user-shield text-4xl mb-2 text-blue-300"></i>
+        <span class="font-semibold">Reliability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Experience ------------------------------------------------------->
+    <section>
+     <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+          <i class="fas fa-briefcase"></i>
+        </span>
+        Experience
+      </h2>
+    
+<div>
+  <h3 class="font-bold text-lg text-blue-800">Freelance Full Stack Developer</h3>
+  <p class="text-sm text-gray-600">Jan 2023 – Present</p>
+  <ul class="px-8 ml-4">
+    <li><i class="fas fa-check text-green-500 mr-1"></i> Developed and maintained responsive websites using HTML, CSS, JavaScript, PHP, and Node.js.</li>
+    <li><i class="fas fa-check text-green-500 mr-1"></i> Integrated RESTful APIs and database systems (MySQL, MongoDB).</li>
+    <li><i class="fas fa-check text-green-500 mr-1"></i> Collaborated with clients to understand project requirements and deliver timely solutions.</li>
+  </ul>
+</div>
+</section>
+
+  </div>
+
+  <!-- RIGHT COLUMN ------------------------------------------------------>
+  <div class="flex flex-col gap-8">
+    
+     <!-- About Me ---------------------------------------------------------->
+    <section>
+     <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+   <i class="fas fa-user-circle"></i>
+        </span>
+        About Me
+      </h2>
+
+    <p class="text-gray-700 leading-relaxed">
+  I'm Eyerusalem Kindalem Getnet, a Computer Science graduate from Wachemo University and an aspiring Full Stack Developer with a passion for leveraging technology to solve real-world problems and build innovative solutions. While I specialize in building responsive websites using HTML, CSS, and JavaScript, my skills go beyond full stack development. I’m also experienced in troubleshooting computer systems, managing networks, and ensuring smooth IT operations. Known for being a quick learner and a committed team player, I thrive in dynamic environments where I can continuously grow and contribute in various technical capacities.
+</p>
+
+    </section>
+    
+<!-- Education -->
+<section>
+   <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+      <i class="fas fa-graduation-cap"></i>
+    </span>
+    Education
+  </h2>
+
+  <div class="relative border-l-4 border-blue-400 pl-8 ml-4 space-y-1">
+    <!-- Elementary -->
+    <div class="relative">
+      <div class="absolute -left-14 top-1/2 -translate-y-1/2
+                  w-8 h-8 flex items-center justify-center ml-1
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+        <i class="fas fa-school"></i>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg text-blue-800">Fetawrati Gebeye Primary School</h3>
+        <p class="text-sm text-gray-600">Debretabor | 2008– 2016</p>
+      </div>
+    </div>
+
+    <!-- Secondary -->
+    <div class="relative">
+      <div class="absolute -left-14 top-1/2 -translate-y-1/2
+                  w-8 h-8 flex items-center justify-center ml-1
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+        <i class="fas fa-university"></i>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg text-blue-800">Tewodros Secondary and Preparatory School</h3>
+        <p class="text-sm text-gray-600">Debretabor | 2016 – 2018</p>
+      </div>
+    </div>
+
+    <!-- Preparatory -->
+    <div class="relative">
+      <div class="absolute -left-14 top-1/2 -translate-y-1/2
+                  w-8 h-8 flex items-center justify-center ml-1
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+        <i class="fas fa-chalkboard-teacher"></i>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg text-blue-800">Tewodros Secondary and Preparatory School</h3>
+        <p class="text-sm text-gray-600">Debretabor | 2018 – 2020</p>
+      </div>
+    </div>
+
+    <!-- University -->
+    <div class="relative">
+      <div class="absolute -left-14 top-1/2 -translate-y-1/2
+                  w-8 h-8 flex items-center justify-center ml-1
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg text-blue-800">Wachemo University</h3>
+        <p class="text-sm text-gray-600">BSc in Computer Science | 2021 – 2024</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Languages ---------------------------------------------------------->
+    <section>
+ <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+          <i class="fas fa-language"></i>
+        </span>
+        Languages
+      </h2>
+
+<ul class="px-8 ml-4">
+  <li><i class="fas fa-check text-green-500 mr-1"></i> Amharic – Native</li>
+  <li><i class="fas fa-check text-green-500 mr-1"></i> English – Proficient</li>
+</ul>
+
+    </section>
+
+    <!-- Experience ----------------------------------------------------->
+    <section>
+ <h2
+  class="relative text-2xl font-semibold text-gray-800 mb-4
+         custom-header-bg border-2 border-blue-100 rounded-full
+         py-2 w-full flex items-center justify-center"
+>
+  <!-- icon in top-left corner, overlapping border -->
+  <span
+    class="absolute -top-3 -left-4
+           w-12 h-12 flex items-center justify-center
+           custom-icon-bg text-white rounded-full
+           border-2 border-white shadow-md text-xl"
+  >
+          <i class="fas fa-user-tie"></i>
+        </span>
+        References
+      </h2>
+<div class="text-gray-600">
+  
+
+<ul class=" text-gray-800">
+  <li>
+    <i class="fas fa-check text-green-500 mr-1"></i>
+    <strong class="font-bold text-lg text-blue-800">Mr. Kumela Neda (MBA)</strong><br>
+    Head, Department of Computer Science<br>
+    <i class="fas fa-university text-blue-800 mr-1"></i> Wachemo University<br>
+    Phone: +251923632213<br>
+    Email: kumela2010@gmail.com
+  </li>
+</ul>
+
+</div>
+
+    </section>
+  </div>
+</main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</body>
+</html>
