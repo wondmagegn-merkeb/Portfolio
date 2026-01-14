@@ -11,6 +11,12 @@
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
     .icon-spacing {
       margin-right: 0.5rem;
       min-width: 20px;
@@ -19,42 +25,246 @@
    .custom-header-bg {
     background-color: #208aba;
     color: white;
+    transition: all 0.3s ease;
   }
   .custom-icon-bg{
     background-color: #13526f;
     color: white;
+    transition: all 0.3s ease;
   }
-  </style>
-  <style>
+
+  /* Smooth animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  /* Hover effects */
+  section {
+    transition: all 0.3s ease;
+  }
+
+  section:hover {
+    transform: translateY(-5px);
+  }
+
+  .skill-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Header animation */
+  header {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  /* Section animations */
+  main > div > section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  main > div > section:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  main > div > section:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  main > div > section:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  main > div > section:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  main > div > section:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  main > div > section:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  /* Timeline animation */
+  .timeline-item {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item:hover {
+    transform: translateX(10px);
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #208aba;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #13526f;
+    transition: all 0.3s ease;
+  }
+
+  .timeline-item:hover::before {
+    transform: translateY(-50%) scale(1.3);
+    box-shadow: 0 0 0 3px #208aba, 0 0 20px rgba(32, 138, 186, 0.5);
+  }
+
+  /* Button animations */
   .download-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  padding: 10px 20px;
-  background-color: #1e3a8a;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.back-btn{
-  bottom: 70px;
-}
-.download-btn i {
-  margin-right: 6px;
-}
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .download-btn:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .download-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.6);
+  }
+
+  .download-btn:active {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  .back-btn{
+    bottom: 80px;
+  }
+
+  .download-btn i {
+    margin-right: 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .download-btn span {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header hover effect */
+  header:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Profile image animation */
+  header img {
+    transition: all 0.3s ease;
+  }
+
+  header:hover img {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Skill icons animation */
+  .skill-card i {
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Section headers hover */
+  h2:hover .custom-header-bg {
+    background-color: #13526f;
+    transform: scale(1.02);
+  }
+
+  h2:hover .custom-icon-bg {
+    background-color: #208aba;
+    transform: scale(1.1) rotate(5deg);
+  }
 
 </style>
 
 </head>
 <body  class="p-6 mb-1 bg-sky-950text-white transition-colors duration-300" style="background-color: #082f49">
 <a href="Eyerusalem_kindalem_getnet.pdf" download class="download-btn">
-  <i class="fas fa-file-pdf"></i> Download CV
+  <span><i class="fas fa-file-pdf"></i> Download CV</span>
 </a>
 <a href="./index.html" class="download-btn back-btn">
-  <i class="fas fa-arrow-left"></i> Back
+  <span><i class="fas fa-arrow-left"></i> Back</span>
 </a>
 
  <header class="max-w-4xl mx-auto shadow-md rounded-lg p-6 flex flex-col md:flex-row items-center justify-between gap-6" style="background-color: #208aba; color: #fff">
@@ -138,35 +348,35 @@
   <div>
     <h3 class="text-xl font-semibold text-blue-800 mb-1">Technical Skills</h3>
     <div class="grid grid-cols-4 sm:grid-cols-4 gap-1 text-white mb-1">
-      <div class="flex flex-col items-center bg-blue-700 p-2 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-2 rounded-lg shadow-md cursor-pointer">
         <i class="fab fa-html5 text-4xl mb-2 text-orange-500"></i>
         <span class="font-semibold">HTML5</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fab fa-css3-alt text-4xl mb-2 text-blue-400"></i>
         <span class="font-semibold">CSS3</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fab fa-js-square text-4xl mb-2 text-yellow-400"></i>
         <span class="font-semibold">JavaScript</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fab fa-node text-4xl mb-2 text-green-400"></i>
         <span class="font-semibold">Node.js</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fab fa-react text-4xl mb-2 text-cyan-400"></i>
         <span class="font-semibold">React</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-database text-4xl mb-2 text-indigo-400"></i>
         <span class="font-semibold">Databases</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fab fa-php text-4xl mb-2 text-purple-600"></i>
         <span class="font-semibold">PHP</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-code text-4xl mb-2 text-gray-300"></i>
         <span class="font-semibold">Problem Solving</span>
       </div>
@@ -177,27 +387,27 @@
   <div>
     <h3 class="text-xl font-semibold text-blue-800 mb-1">Soft Skills</h3>
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 text-white">
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-users text-4xl mb-2 text-yellow-300"></i>
         <span class="font-semibold">Teamwork</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-lightbulb text-4xl mb-2 text-yellow-400"></i>
         <span class="font-semibold">Creativity</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-5 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-5 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-comments text-4xl mb-2 text-green-300"></i>
         <span class="font-semibold">Communication</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-clock text-4xl mb-2 text-red-400"></i>
         <span class="font-semibold">Time Management</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-brain text-4xl mb-2 text-purple-400"></i>
         <span class="font-semibold">Critical Thinking</span>
       </div>
-      <div class="flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md">
+      <div class="skill-card flex flex-col items-center bg-blue-700 p-4 rounded-lg shadow-md cursor-pointer">
         <i class="fas fa-user-shield text-4xl mb-2 text-blue-300"></i>
         <span class="font-semibold">Reliability</span>
       </div>
@@ -288,10 +498,10 @@
 
   <div class="relative border-l-4 border-blue-400 pl-8 ml-4 space-y-1">
     <!-- Elementary -->
-    <div class="relative">
+    <div class="timeline-item relative p-3 rounded-lg hover:bg-blue-50 transition-all duration-300">
       <div class="absolute -left-14 top-1/2 -translate-y-1/2
                   w-8 h-8 flex items-center justify-center ml-1
-                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow transition-all duration-300">
         <i class="fas fa-school"></i>
       </div>
       <div>
@@ -301,10 +511,10 @@
     </div>
 
     <!-- Secondary -->
-    <div class="relative">
+    <div class="timeline-item relative p-3 rounded-lg hover:bg-blue-50 transition-all duration-300">
       <div class="absolute -left-14 top-1/2 -translate-y-1/2
                   w-8 h-8 flex items-center justify-center ml-1
-                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow transition-all duration-300">
         <i class="fas fa-university"></i>
       </div>
       <div>
@@ -314,10 +524,10 @@
     </div>
 
     <!-- Preparatory -->
-    <div class="relative">
+    <div class="timeline-item relative p-3 rounded-lg hover:bg-blue-50 transition-all duration-300">
       <div class="absolute -left-14 top-1/2 -translate-y-1/2
                   w-8 h-8 flex items-center justify-center ml-1
-                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow transition-all duration-300">
         <i class="fas fa-chalkboard-teacher"></i>
       </div>
       <div>
@@ -327,10 +537,10 @@
     </div>
 
     <!-- University -->
-    <div class="relative">
+    <div class="timeline-item relative p-3 rounded-lg hover:bg-blue-50 transition-all duration-300">
       <div class="absolute -left-14 top-1/2 -translate-y-1/2
                   w-8 h-8 flex items-center justify-center ml-1
-                  bg-blue-700 text-white rounded-full border-8 border-white shadow">
+                  bg-blue-700 text-white rounded-full border-8 border-white shadow transition-all duration-300">
         <i class="fas fa-laptop-code"></i>
       </div>
       <div>
@@ -407,5 +617,127 @@
 </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  
+  <script>
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    document.querySelectorAll('main > div > section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Add hover effect to skill cards
+    document.querySelectorAll('.skill-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.05)';
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add parallax effect on scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      const header = document.querySelector('header');
+      
+      if (header) {
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          header.style.transform = 'translateY(-100%)';
+        } else {
+          header.style.transform = 'translateY(0)';
+        }
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Add animation to timeline items on scroll
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateX(0)';
+          }, index * 200);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateX(-20px)';
+      item.style.transition = 'all 0.5s ease';
+      timelineObserver.observe(item);
+    });
+
+    // Add click animation to buttons
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+  </script>
+
+  <style>
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.6);
+      transform: scale(0);
+      animation: ripple-animation 0.6s ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-animation {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  </style>
 </body>
 </html>
