@@ -87,8 +87,11 @@ The built files will be in the `dist` folder after running `npm run build`. You 
 
 ## Notes
 
-- The old HTML files (certificates.html, cv.html) are still in the root directory and can be accessed directly or converted to React routes later
-- All images and assets should be placed in the `public` folder
+- All images are now loaded from online sources (currently using Unsplash placeholders)
+- You can replace the image URLs in the components with your own hosted images
+- Profile images: Update URLs in `Hero.jsx` and `About.jsx`
+- Project images: Update URLs in `Projects.jsx`
+- CV link: Update the Google Drive link in `Header.jsx` (replace `YOUR_FILE_ID` with your actual file ID)
 - The contact form uses FormSubmit.co service
 
 ## License
