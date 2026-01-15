@@ -30,7 +30,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: FaGithub,
-      href: "https://github.com",
+      href: "https://github.com/wondmagegn-merkeb",
       label: "GitHub",
       bgColor: "bg-gray-800 dark:bg-gray-800",
       hoverBgColor: "hover:bg-gray-700 dark:hover:bg-gray-700",

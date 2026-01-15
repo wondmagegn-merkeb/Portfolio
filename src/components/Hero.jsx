@@ -172,7 +172,7 @@ const Hero = () => {
               data-aos-delay="500"
             >
               <a
-                href="https://github.com"
+                href="https://github.com/wondmagegn-merkeb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center bg-white dark:bg-sky-900 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400"

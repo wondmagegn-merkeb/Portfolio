@@ -44,7 +44,7 @@ This guide helps fix CSS and styling issues when deploying to cPanel.
    ├── Project 1.png
    ├── Project 2.png
    ├── Project 3.png
-   └── Eyerusalem_kindalem_getnet.pdf
+   └── Wondmagegn_Merkeb_Beleka_CV .pdf
    ```
 
 2. **File Permissions**

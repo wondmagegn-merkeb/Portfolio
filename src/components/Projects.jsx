@@ -1,112 +1,194 @@
-import { useState, useEffect } from 'react'
-import { FaTimes, FaChevronLeft, FaChevronRight, FaImages } from 'react-icons/fa'
+import { useState, useEffect } from "react";
+import {
+  FaTimes,
+  FaChevronLeft,
+  FaChevronRight,
+  FaImages,
+} from "react-icons/fa";
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projects = [
     {
       id: 1,
-      title: 'Portfolio Website',
+      title: "MealAttend - QR-Based Meal Attendance System",
       description:
-        'A personal portfolio built with HTML, Tailwind CSS, and AOS.js to showcase my skills and projects.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+        "A robust web application designed to streamline meal attendance tracking in schools and institutions. Features QR code scanning for touchless attendance, comprehensive admin dashboard, user management, detailed reporting with PDF/Excel exports, customizable ID card generation, and role-based access control.",
+      image: "/projects/mealattend-main.png",
       gallery: [
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop',
+        "/projects/mealattend-main.png",
+        "/projects/mealattend-1.png",
+        "/projects/mealattend-2.png",
+        "/projects/mealattend-3.png",
       ],
-      tags: ['HTML', 'Tailwind'],
-      tagColor: 'blue',
+      tags: ["Next.js", "Prisma", "PostgreSQL"],
+      tagColor: "purple",
     },
     {
       id: 2,
-      title: 'Telegram Order Bot',
+      title: "House Rental System - Hawassa",
       description:
-        'A full-featured bot built with Node.js, Sequelize, and Telegraf for managing food orders.',
-      image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop',
+        "A comprehensive property rental management platform for Hawassa, Ethiopia. Connects property owners with renters featuring advanced search and filtering, property categories, booking system with payment integration, interactive maps, reviews and ratings, owner dashboard with analytics, and admin management panel.",
+      image: "/projects/house-rental-main.png",
       gallery: [
-        'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551033406-611cf9a28f61?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551033406-611cf9a28f61?w=1200&h=800&fit=crop',
+        "/projects/house-rental-main.png",
+        "/projects/house-rental-1.png",
+        "/projects/house-rental-2.png",
+        "/projects/house-rental-3.png",
+        "/projects/house-rental-4.png",
       ],
-      tags: ['Node.js', 'Telegraf'],
-      tagColor: 'green',
+      tags: ["React", "Node.js", "MongoDB"],
+      tagColor: "blue",
     },
     {
       id: 3,
-      title: 'A Smart Meal Attendance Tracker',
+      title: "ORDER_BOT - Telegram Food Ordering System",
       description:
-        'MealAttend is a modern web app that simplifies meal attendance in schools and institutions. It uses QR code scanning to quickly track student attendance and features a powerful admin dashboard for managing users, viewing reports, and analyzing data.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
+        "A comprehensive food ordering and management system with Telegram bot integration. Features include admin dashboard with analytics, food and category management, order tracking with real-time notifications, user management, audit logs, web push notifications, and dual Telegram bots for users and admins.",
+      image: "/projects/order-bot-main.png",
       gallery: [
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop',
+        "/projects/order-bot-main.png",
+        "/projects/order-bot-1.png",
+        "/projects/order-bot-2.png",
+        "/projects/order-bot-3.png",
+        "/projects/order-bot-4.png",
       ],
-      tags: ['Web App', 'QR Code'],
-      tagColor: 'purple',
+      tags: ["Node.js", "Telegraf", "MySQL"],
+      tagColor: "green",
     },
-  ]
+    {
+      id: 4,
+      title: "Fyda-Print - ID Card Generator & PDF Merger",
+      description:
+        "A modern web application for Fast Fyda Print featuring ID card generation, PDF merging capabilities, user authentication, comprehensive admin dashboard, agent panel, and documentation system. Built with React, TypeScript, and Vite for fast performance with dark/light theme support.",
+      image: "/projects/fyda-print-main.png",
+      gallery: [
+        "/projects/fyda-print-main.png",
+        "/projects/fyda-print-1.png",
+        "/projects/fyda-print-2.png",
+        "/projects/fyda-print-3.png",
+      ],
+      tags: ["React", "TypeScript", "Vite"],
+      tagColor: "blue",
+    },
+    {
+      id: 5,
+      title: "Wese Hotel Management System",
+      description:
+        "A modern, comprehensive hotel management admin panel featuring interactive dashboard with revenue analytics, reservation management with calendar view, guest information hub, property setup for rooms and amenities, dining management with menu items, financial tracking with invoices and payments, and user management with role-based access control.",
+      image: "/projects/wese-hotel-main.png",
+      gallery: [
+        "/projects/wese-hotel-main.png",
+        "/projects/wese-hotel-1.png",
+        "/projects/wese-hotel-2.png",
+        "/projects/wese-hotel-3.png",
+      ],
+      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+      tagColor: "purple",
+    },
+    {
+      id: 6,
+      title: "AddisSpark Frontend - Company Portfolio",
+      description:
+        "A modern, responsive portfolio website for AddisSpark showcasing innovative software solutions, services, and projects. Features multi-page navigation, service showcase, products & solutions display, project portfolio with case studies, technology stack showcase, contact form, and beautiful UI/UX with smooth animations and transitions using yellow and blue gradient theme.",
+      image: "/projects/addisspark-main.png",
+      gallery: [
+        "/projects/addisspark-main.png",
+        "/projects/addisspark-2.png",
+        "/projects/addisspark-3.png",
+        "/projects/addisspark-4.png",
+      ],
+      tags: ["React", "Vite", "Tailwind CSS"],
+      tagColor: "green",
+    },
+    {
+      id: 7,
+      title: "Portfolio Website",
+      description:
+        "A modern, responsive portfolio website built with React, Vite, and Tailwind CSS. Features dark mode, smooth animations with AOS.js, and a fully responsive design to showcase skills, projects, and professional experience with an elegant and professional UI.",
+      image: "/projects/portfolio-main.png",
+      gallery: [
+        "/projects/portfolio-main.png",
+        "/projects/portfolio-1.png",
+        "/projects/portfolio-2.png",
+        "/projects/portfolio-3.png",
+        "/projects/portfolio-4.png",
+      ],
+      tags: ["React", "Vite", "Tailwind CSS"],
+      tagColor: "blue",
+    },
+  ];
 
   const getTagClasses = (color) => {
     const colorMap = {
-      blue: 'bg-blue-100 dark:bg-sky-800 text-blue-600 dark:text-sky-300',
-      green: 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400',
-      purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400',
-    }
-    return colorMap[color] || colorMap.blue
-  }
+      blue: "bg-blue-100 dark:bg-sky-800 text-blue-600 dark:text-sky-300",
+      green:
+        "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
+      purple:
+        "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
+    };
+    return colorMap[color] || colorMap.blue;
+  };
 
   const openGallery = (project) => {
-    setSelectedProject(project)
-    setCurrentImageIndex(0)
-    document.body.style.overflow = 'hidden'
-  }
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+    document.body.style.overflow = "hidden";
+  };
 
   const closeGallery = () => {
-    setSelectedProject(null)
-    document.body.style.overflow = 'unset'
-  }
+    setSelectedProject(null);
+    document.body.style.overflow = "unset";
+  };
 
   const nextImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prev) => (prev + 1) % selectedProject.gallery.length)
+      setCurrentImageIndex(
+        (prev) => (prev + 1) % selectedProject.gallery.length
+      );
     }
-  }
+  };
 
   const prevImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prev) => (prev - 1 + selectedProject.gallery.length) % selectedProject.gallery.length)
+      setCurrentImageIndex(
+        (prev) =>
+          (prev - 1 + selectedProject.gallery.length) %
+          selectedProject.gallery.length
+      );
     }
-  }
+  };
 
   useEffect(() => {
-    if (!selectedProject) return
+    if (!selectedProject) return;
 
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        closeGallery()
-      } else if (e.key === 'ArrowRight') {
-        setCurrentImageIndex((prev) => (prev + 1) % selectedProject.gallery.length)
-      } else if (e.key === 'ArrowLeft') {
-        setCurrentImageIndex((prev) => (prev - 1 + selectedProject.gallery.length) % selectedProject.gallery.length)
+      if (e.key === "Escape") {
+        closeGallery();
+      } else if (e.key === "ArrowRight") {
+        setCurrentImageIndex(
+          (prev) => (prev + 1) % selectedProject.gallery.length
+        );
+      } else if (e.key === "ArrowLeft") {
+        setCurrentImageIndex(
+          (prev) =>
+            (prev - 1 + selectedProject.gallery.length) %
+            selectedProject.gallery.length
+        );
       }
-    }
+    };
 
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [selectedProject])
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedProject]);
 
   useEffect(() => {
     return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [])
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   return (
     <section
@@ -162,7 +244,9 @@ const Projects = () => {
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className={`px-3 py-1 ${getTagClasses(project.tagColor)} text-xs rounded-full font-medium`}
+                    className={`px-3 py-1 ${getTagClasses(
+                      project.tagColor
+                    )} text-xs rounded-full font-medium`}
                   >
                     {tag}
                   </span>
@@ -207,7 +291,9 @@ const Projects = () => {
             <div className="w-full h-full flex items-center justify-center">
               <img
                 src={selectedProject.gallery[currentImageIndex]}
-                alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                alt={`${selectedProject.title} - Image ${
+                  currentImageIndex + 1
+                }`}
                 className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl animate-fadeIn"
               />
             </div>
@@ -239,8 +325,8 @@ const Projects = () => {
                     onClick={() => setCurrentImageIndex(index)}
                     className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
                       index === currentImageIndex
-                        ? 'border-blue-500 dark:border-sky-400 scale-110'
-                        : 'border-transparent opacity-60 hover:opacity-100'
+                        ? "border-blue-500 dark:border-sky-400 scale-110"
+                        : "border-transparent opacity-60 hover:opacity-100"
                     }`}
                   >
                     <img
@@ -256,7 +342,7 @@ const Projects = () => {
         </div>
       )}
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

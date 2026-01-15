@@ -96,4 +96,4 @@ The built files will be in the `dist` folder after running `npm run build`. You 
 
 ## License
 
-© 2025 Eyerusalem Kindalem Getnet. All rights reserved.
+© 2025 Wondmagegn Merkeb Beleka. All rights reserved.

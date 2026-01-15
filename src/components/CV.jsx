@@ -265,13 +265,13 @@ const CV = () => {
     >
       {/* Download and Back Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
-        <button
+        {/* <button
           onClick={handleDownload}
           className="download-btn bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
         >
           <FaDownload />
           <span>Download CV</span>
-        </button>
+        </button> */}
         <Link
           to="/"
           className="download-btn bg-gradient-to-r from-blue-800 to-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
