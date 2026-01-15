@@ -1,32 +1,40 @@
 import { useEffect, useRef } from "react";
 import {
-  FaCode,
   FaServer,
   FaDatabase,
   FaPalette,
   FaTools,
   FaLaptopCode,
-  FaPython,
   FaNode,
   FaReact,
   FaAngular,
   FaLaravel,
   FaGitAlt,
-  FaHtml5,
-  FaCss3Alt,
   FaJs,
   FaBootstrap,
 } from "react-icons/fa";
 import {
-  SiGo,
   SiGin,
   SiDjango,
   SiFlask,
   SiFastapi,
+  SiExpress,
   SiTailwindcss,
   SiMongodb,
   SiPostgresql,
+  SiMysql,
+  SiSqlite,
+  SiFirebase,
   SiTypescript,
+  SiVuedotjs,
+  SiNextdotjs,
+  SiRedux,
+  SiVite,
+  SiSvelte,
+  SiGraphql,
+  SiNuxtdotjs,
+  SiDocker,
+  SiPostman,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -70,13 +78,21 @@ const Skills = () => {
       color: "from-blue-500 to-cyan-500",
       skills: [
         { name: "React", icon: FaReact, color: "text-blue-500" },
+        {
+          name: "Next.js",
+          icon: SiNextdotjs,
+          color: "text-gray-900 dark:text-white",
+        },
+        { name: "Vue.js", icon: SiVuedotjs, color: "text-green-500" },
         { name: "Angular", icon: FaAngular, color: "text-red-500" },
+        { name: "Svelte", icon: SiSvelte, color: "text-orange-500" },
         { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-        { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
-        { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
         { name: "JavaScript", icon: FaJs, color: "text-yellow-500" },
+        { name: "Redux", icon: SiRedux, color: "text-purple-600" },
         { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
-        { name: "Bootstrap", icon: FaBootstrap, color: "text-purple-600" },
+        { name: "Vite", icon: SiVite, color: "text-yellow-400" },
+        // { name: "GraphQL", icon: SiGraphql, color: "text-pink-500" },
+        // { name: "Nuxt.js", icon: SiNuxtdotjs, color: "text-green-600" },
       ],
     },
     {
@@ -85,10 +101,13 @@ const Skills = () => {
       color: "from-green-500 to-emerald-500",
       skills: [
         { name: "Node.js", icon: FaNode, color: "text-green-600" },
+        {
+          name: "Express",
+          icon: SiExpress,
+          color: "text-gray-800 dark:text-gray-200",
+        },
         { name: "Laravel", icon: FaLaravel, color: "text-red-600" },
-        { name: "Go", icon: SiGo, color: "text-cyan-500" },
         { name: "Gin", icon: SiGin, color: "text-blue-500" },
-        { name: "Python", icon: FaPython, color: "text-yellow-500" },
         { name: "Django", icon: SiDjango, color: "text-green-700" },
         {
           name: "Flask",
@@ -105,6 +124,9 @@ const Skills = () => {
       skills: [
         { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
         { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-700" },
+        { name: "MySQL", icon: SiMysql, color: "text-blue-600" },
+        { name: "SQLite", icon: SiSqlite, color: "text-blue-500" },
+        { name: "Firebase", icon: SiFirebase, color: "text-orange-500" },
       ],
     },
     {
@@ -113,11 +135,8 @@ const Skills = () => {
       color: "from-orange-500 to-red-500",
       skills: [
         { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
-        {
-          name: "Code",
-          icon: FaCode,
-          color: "text-gray-700 dark:text-gray-300",
-        },
+        { name: "Docker", icon: SiDocker, color: "text-blue-500" },
+        { name: "Postman", icon: SiPostman, color: "text-orange-600" },
       ],
     },
   ];

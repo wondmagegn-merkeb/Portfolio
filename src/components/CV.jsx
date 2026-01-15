@@ -15,10 +15,7 @@ import {
   FaLanguage,
   FaUserTie,
   FaSchool,
-  FaLaptopCode,
   FaCheck,
-  FaHtml5,
-  FaCss3Alt,
   FaJsSquare,
   FaNode,
   FaReact,
@@ -33,15 +30,11 @@ import {
   FaBrain,
   FaUserShield,
   FaUniversity,
-  FaChalkboardTeacher,
-  FaPython,
   FaLaravel,
   FaGitAlt,
   FaJs,
-  FaBootstrap,
 } from "react-icons/fa";
 import {
-  SiGo,
   SiGin,
   SiDjango,
   SiFlask,
@@ -50,6 +43,17 @@ import {
   SiMongodb,
   SiPostgresql,
   SiTypescript,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiSvelte,
+  SiRedux,
+  SiVite,
+  SiExpress,
+  SiMysql,
+  SiSqlite,
+  SiFirebase,
+  SiDocker,
+  SiPostman,
 } from "react-icons/si";
 import { Link } from "react-router-dom";
 
@@ -59,11 +63,10 @@ const CV = () => {
   const personalInfo = {
     name: "Wondmagegn Merkeb Beleka",
     title: "Full Stack Developer",
-    email: "wondmagegnmerkeb@gmail.com",
-    phone: "+251923632213",
-    location: "Debretabor, Ethiopia",
-    profileImage:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face", // Update with actual path
+    email: "wondmagegnmerkebbeleka@gmail.com",
+    phone: "+251 977 959 9896",
+    location: "Hawassa, Ethiopia",
+    profileImage: "./programmer-line-gradient-icon-vector.jpg",
   };
 
   const objective =
@@ -75,27 +78,33 @@ const CV = () => {
   const technicalSkills = [
     // Frontend
     { name: "React", icon: FaReact, color: "text-cyan-400" },
+    { name: "Next.js", icon: SiNextdotjs, color: "text-gray-100" },
+    { name: "Vue.js", icon: SiVuedotjs, color: "text-green-400" },
     { name: "Angular", icon: FaAngular, color: "text-red-500" },
-    { name: "TypeScript", icon: SiTypescript, color: "text-blue-600" },
-    { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
-    { name: "CSS3", icon: FaCss3Alt, color: "text-blue-400" },
+    { name: "Svelte", icon: SiSvelte, color: "text-orange-400" },
+    { name: "TypeScript", icon: SiTypescript, color: "text-blue-400" },
     { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
-    { name: "Bootstrap", icon: FaBootstrap, color: "text-purple-600" },
+    { name: "Redux", icon: SiRedux, color: "text-purple-400" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
+    { name: "Vite", icon: SiVite, color: "text-yellow-300" },
     // Backend
     { name: "Node.js", icon: FaNode, color: "text-green-400" },
-    { name: "Laravel", icon: FaLaravel, color: "text-red-600" },
-    { name: "Go", icon: SiGo, color: "text-cyan-500" },
-    { name: "Gin", icon: SiGin, color: "text-blue-500" },
-    { name: "Python", icon: FaPython, color: "text-yellow-500" },
-    { name: "Django", icon: SiDjango, color: "text-green-700" },
-    { name: "Flask", icon: SiFlask, color: "text-gray-800" },
-    { name: "FastAPI", icon: SiFastapi, color: "text-teal-500" },
+    { name: "Express", icon: SiExpress, color: "text-gray-200" },
+    { name: "Laravel", icon: FaLaravel, color: "text-red-500" },
+    { name: "Gin", icon: SiGin, color: "text-blue-400" },
+    { name: "Django", icon: SiDjango, color: "text-green-500" },
+    { name: "Flask", icon: SiFlask, color: "text-gray-300" },
+    { name: "FastAPI", icon: SiFastapi, color: "text-teal-400" },
     // Databases
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-700" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
+    { name: "MySQL", icon: SiMysql, color: "text-blue-500" },
+    { name: "SQLite", icon: SiSqlite, color: "text-blue-300" },
+    { name: "Firebase", icon: SiFirebase, color: "text-orange-400" },
     // Tools
-    { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
+    { name: "Git", icon: FaGitAlt, color: "text-orange-400" },
+    { name: "Docker", icon: SiDocker, color: "text-blue-400" },
+    { name: "Postman", icon: SiPostman, color: "text-orange-500" },
   ];
 
   const softSkills = [
@@ -119,28 +128,28 @@ const CV = () => {
 
   const education = [
     {
-      institution: "Fetawrati Gebeye Primary School",
-      location: "Debretabor",
-      period: "2008– 2016",
+      institution: "Primary School Education",
+      location: "Grade 8 Completion",
+      period: "2008 E.C. (2016)",
       icon: FaSchool,
     },
     {
-      institution: "Tewodros Secondary and Preparatory School",
-      location: "Debretabor",
-      period: "2016 – 2018",
-      icon: FaUniversity,
+      institution: "Tesso Secondary School",
+      location: "Grade 9-10",
+      period: "2009 - 2010 E.C.",
+      icon: FaSchool,
     },
     {
-      institution: "Tewodros Secondary and Preparatory School",
-      location: "Debretabor",
-      period: "2018 – 2020",
-      icon: FaChalkboardTeacher,
+      institution: "Hawassa Tabor Senior Secondary & Preparatory School",
+      location: "Grade 11-12",
+      period: "2011",
+      icon: FaSchool,
     },
     {
       institution: "Wachemo University",
       location: "BSc in Computer Science",
       period: "2021 – 2024",
-      icon: FaLaptopCode,
+      icon: FaGraduationCap,
     },
   ];
 
@@ -161,118 +170,70 @@ const CV = () => {
     if (!cvRef.current) return;
 
     try {
-      // Show loading state
-      const downloadBtn = document.querySelector(".download-btn");
-      const originalText = downloadBtn?.querySelector("span")?.textContent;
-      if (downloadBtn) {
-        downloadBtn.disabled = true;
-        const span = downloadBtn.querySelector("span");
-        if (span) span.textContent = "Generating PDF...";
-      }
-
-      // Hide download buttons during PDF generation
+      // Hide download buttons
       const buttons = document.querySelectorAll(".download-btn");
       buttons.forEach((btn) => {
         btn.style.opacity = "0";
         btn.style.pointerEvents = "none";
       });
 
-      // Wait a bit for any animations to complete
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await new Promise((r) => setTimeout(r, 500));
 
-      // Create PDF with proper page layout
+      // A4 size in mm
+      const pdfWidth = 217;
+      const pdfHeight = 297;
+
       const pdf = new jsPDF("p", "mm", "a4");
-      const pdfWidth = 210; // A4 width in mm
-      const pdfHeight = 297; // A4 height in mm
-      const margin = 10; // Margin in mm
-      const contentWidth = pdfWidth - 2 * margin;
-      const contentHeight = pdfHeight - 2 * margin; // Available height per page
 
-      // Capture the entire CV content
+      // Capture full CV
       const canvas = await html2canvas(cvRef.current, {
-        scale: 2,
+        scale: 3, // HIGH QUALITY
         useCORS: true,
-        logging: false,
         backgroundColor: "#082f49",
-        allowTaint: true,
-        removeContainer: false,
-        imageTimeout: 15000,
         windowWidth: cvRef.current.scrollWidth,
         windowHeight: cvRef.current.scrollHeight,
-        onclone: (clonedDoc) => {
-          // Ensure all styles are preserved
-          const clonedElement = clonedDoc.querySelector("[data-cv-content]");
-          if (clonedElement) {
-            clonedElement.style.backgroundColor = "#082f49";
-            clonedElement.style.color = "#ffffff";
-          }
-          // Hide buttons in cloned document
-          const clonedButtons = clonedDoc.querySelectorAll(".download-btn");
-          clonedButtons.forEach((btn) => {
-            btn.style.display = "none";
+        onclone: (doc) => {
+          doc.querySelectorAll(".download-btn").forEach((b) => {
+            b.style.display = "none";
           });
         },
       });
 
-      // Calculate image dimensions for PDF
-      const imgWidth = contentWidth;
-      const imgHeight = (canvas.height * contentWidth) / canvas.width;
-      const totalPages = Math.ceil(imgHeight / contentHeight);
+      // Calculate slice height (in pixels) per A4 page
+      const pagePixelHeight = (canvas.width * pdfHeight) / pdfWidth;
 
-      let yOffset = 0;
       let sourceY = 0;
+      let page = 0;
 
-      // Split content across pages with proper layout
-      for (let page = 0; page < totalPages; page++) {
-        if (page > 0) {
-          pdf.addPage();
-        }
+      while (sourceY < canvas.height) {
+        if (page > 0) pdf.addPage();
 
-        // Calculate height for this page
-        const remainingHeight = imgHeight - yOffset;
-        const pageContentHeight = Math.min(contentHeight, remainingHeight);
-        const pageSourceHeight =
-          (pageContentHeight / imgHeight) * canvas.height;
-
-        // Create canvas for this page's content
         const pageCanvas = document.createElement("canvas");
         pageCanvas.width = canvas.width;
-        pageCanvas.height = pageSourceHeight;
-        const pageCtx = pageCanvas.getContext("2d");
+        pageCanvas.height = Math.min(pagePixelHeight, canvas.height - sourceY);
 
-        // Draw the portion of the image for this page
-        pageCtx.drawImage(
+        const ctx = pageCanvas.getContext("2d");
+        ctx.drawImage(
           canvas,
           0,
           sourceY,
-          canvas.width,
-          pageSourceHeight,
+          canvas.width + 50,
+          pageCanvas.height,
           0,
           0,
-          canvas.width,
-          pageSourceHeight
+          canvas.width - 10,
+          pageCanvas.height
         );
 
-        const pageImgData = pageCanvas.toDataURL("image/png", 1.0);
+        const imgData = pageCanvas.toDataURL("image/png");
 
-        // Add to PDF with proper margins
-        pdf.addImage(
-          pageImgData,
-          "PNG",
-          margin,
-          margin,
-          imgWidth,
-          pageContentHeight,
-          undefined,
-          "FAST"
-        );
+        // FULL PAGE — NO MARGINS
+        pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
 
-        // Update offsets for next page
-        yOffset += pageContentHeight;
-        sourceY += pageSourceHeight;
+        sourceY += pagePixelHeight;
+        page++;
       }
 
-      // Save PDF with colored output
       pdf.save(`${personalInfo.name.replace(/\s+/g, "_")}_CV.pdf`);
 
       // Restore buttons
@@ -280,23 +241,9 @@ const CV = () => {
         btn.style.opacity = "1";
         btn.style.pointerEvents = "auto";
       });
-
-      if (downloadBtn) {
-        downloadBtn.disabled = false;
-        const span = downloadBtn.querySelector("span");
-        if (span && originalText) span.textContent = originalText;
-      }
-    } catch (error) {
-      console.error("Error generating PDF:", error);
-      alert("Error generating PDF. Please try again.");
-
-      // Restore buttons on error
-      const buttons = document.querySelectorAll(".download-btn");
-      buttons.forEach((btn) => {
-        btn.style.opacity = "1";
-        btn.style.pointerEvents = "auto";
-        btn.disabled = false;
-      });
+    } catch (err) {
+      console.error(err);
+      alert("Failed to generate PDF");
     }
   };
 
@@ -349,7 +296,9 @@ const CV = () => {
             }}
           />
           <div>
-            <h1 className="text-3xl font-bold">{personalInfo.name}</h1>
+            <h1 className="text-3xl font-bold from-white to-blue-500 bg-clip-text text-transparent bg-gradient-to-r">
+              {personalInfo.name}
+            </h1>
             <p className="mt-1 text-lg">{personalInfo.title}</p>
           </div>
         </div>

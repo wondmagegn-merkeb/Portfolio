@@ -54,7 +54,7 @@ const Footer = () => {
     },
     {
       icon: FaEnvelope,
-      href: "mailto:eyukk426@gmail.com",
+      href: "mailto:wondmagegnmerkebbeleka@gmail.com",
       label: "Email",
       bgColor: "bg-red-600",
       hoverBgColor: "hover:bg-red-700",
@@ -133,15 +133,15 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-gray-400 dark:text-gray-400">
                 <FaEnvelope className="text-blue-400 dark:text-sky-400 mt-1 flex-shrink-0" />
                 <a
-                  href="mailto:eyukk426@gmail.com"
+                  href="mailto:wondmagegnmerkebbeleka@gmail.com"
                   className="hover:text-blue-400 dark:hover:text-sky-400 transition-colors duration-300"
                 >
-                  eyukk426@gmail.com
+                  wondmagegnmerkebbeleka@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-gray-400 dark:text-gray-400">
                 <FaPhone className="text-blue-400 dark:text-sky-400 mt-1 flex-shrink-0" />
-                <span>+251907363763</span>
+                <span>+251 977 959 9896</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400 dark:text-gray-400">
                 <FaMapMarkerAlt className="text-blue-400 dark:text-sky-400 mt-1 flex-shrink-0" />

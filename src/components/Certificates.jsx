@@ -14,6 +14,7 @@ import {
   FaJsSquare,
   FaNodeJs,
   FaDatabase,
+  FaSchool,
 } from "react-icons/fa";
 
 const Certificates = () => {
@@ -25,90 +26,85 @@ const Certificates = () => {
       id: 1,
       title: "Bachelor of Science in Computer Science",
       issuer: "Wachemo University",
-      date: "2021 - 2024",
-      location: "Ethiopia",
-      status: null,
+      date: "July 2024",
+      location: "Hosanna, Ethiopia",
+      status: "Completed",
       category: "academic",
       icon: FaGraduationCap,
       iconColor: "from-blue-500 to-sky-400",
       badgeColor: "bg-blue-100 dark:bg-sky-800 text-blue-600 dark:text-sky-400",
-      image:
-        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=400&fit=crop&auto=format",
+      image: "/educational-docs/bsc-computer-science.jpg",
+      details: "CGPA: 3.7 | National Exit Examination: 71%",
     },
     {
       id: 2,
-      title: "Full Stack Developer Certification",
-      issuer: "Freelance Development",
-      date: "2023 - Present",
-      location: null,
-      status: "Active",
-      category: "professional",
-      icon: FaBriefcase,
-      iconColor: "from-green-500 to-emerald-400",
-      badgeColor:
-        "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-      image:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop&auto=format",
+      title: "Ethiopian General Secondary Education Certificate",
+      issuer: "NEAEA (National Educational Assessment and Examinations Agency)",
+      date: "August 2018 (2010 E.C.)",
+      location: "Ethiopia",
+      status: "Completed",
+      category: "academic",
+      icon: FaGraduationCap,
+      iconColor: "from-purple-500 to-pink-400",
+      badgeColor: "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
+      image: "/educational-docs/general-secondary-certificate.jpg",
+      details: "9 Subjects | Grades: Amharic (A), English (B), Maths (B), Physics (B), Chemistry (B), Biology (B), Civics (B), Geography (B), History (C)",
     },
     {
       id: 3,
-      title: "Web Development Bootcamp",
-      issuer: "Online Platform",
-      date: "2023",
-      location: null,
-      status: "Verified",
-      category: "online",
-      icon: FaLaptop,
-      iconColor: "from-purple-500 to-pink-400",
-      badgeColor:
-        "bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=400&fit=crop&auto=format",
+      title: "Secondary School Leaving Examination (SSLE)",
+      issuer: "NEAEA",
+      date: "April 2021 (2013 E.C.)",
+      location: "Ethiopia",
+      status: "Completed",
+      category: "academic",
+      icon: FaGraduationCap,
+      iconColor: "from-green-500 to-emerald-400",
+      badgeColor: "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
+      image: "/educational-docs/ssle-certificate.jpg",
+      details: "7 Subjects | Total Score: 500 | English (52), Maths (80), Aptitude (70), Physics (72), Chemistry (76), Biology (72), Civics (78)",
     },
     {
       id: 4,
-      title: "Advanced JavaScript Certification",
-      issuer: "Online Learning Platform",
-      date: "2023",
-      location: null,
-      status: "Verified",
-      category: "online",
-      icon: FaJsSquare,
-      iconColor: "from-yellow-500 to-orange-400",
-      badgeColor:
-        "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400",
-      image:
-        "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop&auto=format",
+      title: "Hawassa Tabor Senior Secondary & Preparatory School",
+      issuer: "Hawassa City Administration Education Department",
+      date: "2011",
+      location: "Hawassa, Ethiopia",
+      status: "Completed",
+      category: "academic",
+      icon: FaSchool,
+      iconColor: "from-indigo-500 to-blue-400",
+      badgeColor: "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400",
+      image: "/educational-docs/tabor-preparatory-transcript.jpg",
+      details: "Grade 11-12 | Grade 11 Rank: 5 (Average: 83.5) | Grade 12 Rank: 7 (Average: 75.9)",
     },
     {
       id: 5,
-      title: "Node.js Backend Development",
-      issuer: "Tech Certification Program",
-      date: "2023",
-      location: null,
+      title: "Tesso Secondary School Transcript",
+      issuer: "Hawassa City Administration Education Department",
+      date: "2009 - 2010 E.C.",
+      location: "Hawassa, Ethiopia",
       status: "Completed",
-      category: "professional",
-      icon: FaNodeJs,
-      iconColor: "from-green-500 to-teal-400",
-      badgeColor:
-        "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&auto=format",
+      category: "academic",
+      icon: FaSchool,
+      iconColor: "from-yellow-500 to-orange-400",
+      badgeColor: "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400",
+      image: "/educational-docs/tesso-secondary-transcript.jpg",
+      details: "Grade 9-10 | Grade 9 Rank: 1 (Average: 80.45) | Grade 10 Rank: 3 (Average: 79.45)",
     },
     {
       id: 6,
-      title: "Database Management Systems",
-      issuer: "Online Certification Course",
-      date: "2024",
-      location: null,
-      status: "Verified",
-      category: "online",
-      icon: FaDatabase,
-      iconColor: "from-indigo-500 to-blue-400",
-      badgeColor:
-        "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format",
+      title: "Primary School Leaving Certificate",
+      issuer: "SNNPR Education Bureau",
+      date: "2008 E.C. (2016)",
+      location: "Hawassa, Ethiopia",
+      status: "Completed",
+      category: "academic",
+      icon: FaSchool,
+      iconColor: "from-teal-500 to-cyan-400",
+      badgeColor: "bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400",
+      image: "/educational-docs/primary-school-certificate.jpg",
+      details: "Grade 8 | Average: 59.79% | Mathematics: 92.50",
     },
   ];
 
@@ -249,9 +245,14 @@ const Certificates = () => {
                     <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
                       {certificate.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">
                       {certificate.issuer}
                     </p>
+                    {certificate.details && (
+                      <p className="text-gray-500 dark:text-gray-400 text-xs mb-4 italic">
+                        {certificate.details}
+                      </p>
+                    )}
                     <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
                       <span className="flex items-center gap-1">
                         <FaCalendar className="text-xs" />

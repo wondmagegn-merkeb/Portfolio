@@ -190,7 +190,7 @@ const Hero = () => {
                 <FaLinkedin className="text-xl" />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:wondmagegnmerkebbeleka@gmail.com"
                 className="w-12 h-12 flex items-center justify-center bg-white dark:bg-sky-900 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-sky-400"
                 aria-label="Email"
               >
@@ -201,7 +201,7 @@ const Hero = () => {
 
           {/* Right Content - Profile Image */}
           <div
-            className="flex-1 flex justify-center lg:justify-end"
+            className="hidden lg:flex flex-1 justify-center lg:justify-end"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
@@ -217,7 +217,7 @@ const Hero = () => {
               <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-sky-500 rounded-full p-1 animate-gradient-border">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                    src="./programmer-line-gradient-icon-vector.jpg"
                     alt="Wondmagegn Profile"
                     className="w-full h-full rounded-full object-cover relative z-10 float-animation"
                   />

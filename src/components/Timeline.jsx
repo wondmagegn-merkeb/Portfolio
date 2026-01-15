@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from "react";
 import {
   FaBriefcase,
   FaGraduationCap,
@@ -6,10 +6,10 @@ import {
   FaCode,
   FaRocket,
   FaAward,
-} from 'react-icons/fa'
+} from "react-icons/fa";
 
 const Timeline = () => {
-  const timelineItemsRef = useRef([])
+  const timelineItemsRef = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,68 +17,97 @@ const Timeline = () => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add('visible')
-            }, index * 200)
+              entry.target.classList.add("visible");
+            }, index * 200);
           }
-        })
+        });
       },
       { threshold: 0.1 }
-    )
+    );
 
     timelineItemsRef.current.forEach((item) => {
-      if (item) observer.observe(item)
-    })
+      if (item) observer.observe(item);
+    });
 
     return () => {
       timelineItemsRef.current.forEach((item) => {
-        if (item) observer.unobserve(item)
-      })
-    }
-  }, [])
+        if (item) observer.unobserve(item);
+      });
+    };
+  }, []);
 
   const timelineData = [
     {
-      title: 'Full Stack Developer',
-      period: '2023 - Present',
+      title: "Primary School Education",
+      period: "2008 E.C. (2016)",
       description:
-        'Building responsive web apps with Node.js, Laravel, Angular, and Tailwind. Developed admin panels, bots, and real-time systems.',
-      icon: FaBriefcase,
-      type: 'professional',
-      color: 'from-blue-500 to-sky-500',
-      achievements: [
-        'Developed scalable web applications',
-        'Built real-time systems',
-        'Created admin panels and bots',
-      ],
-    },
-    {
-      title: 'Wachemo University – BSc in Computer Science',
-      period: '2021 - 2024',
-      description:
-        'Focused on software engineering, algorithms, databases, and web development. Graduated with practical and project experience.',
-      icon: FaGraduationCap,
-      type: 'education',
-      color: 'from-purple-500 to-pink-500',
-      achievements: [
-        'Software Engineering',
-        'Algorithms & Data Structures',
-        'Database Systems',
-      ],
-    },
-    {
-      title: 'Tewodros Secondary and Preparatory School',
-      period: '2016 - 2020',
-      description:
-        'Completed high school with a focus on natural sciences, preparing for tech studies.',
+        "Completed Primary School Leaving Certificate Examination (Grade 8) with distinction in Mathematics (92.50).",
       icon: FaSchool,
-      type: 'education',
-      color: 'from-green-500 to-emerald-500',
+      type: "education",
+      color: "from-yellow-500 to-orange-500",
       achievements: [
-        'Natural Sciences Focus',
-        'Foundation for Tech Studies',
+        "Grade 8 Completion",
+        "Mathematics: 92.50",
+        "Overall Average: 59.79%",
       ],
     },
-  ]
+    {
+      title: "Tesso Secondary School",
+      period: "2009 - 2010 E.C.",
+      description:
+        "Completed Grade 9 and Grade 10 with excellent academic performance. Achieved Rank 1 in Grade 9 and Rank 3 overall in Grade 10.",
+      icon: FaSchool,
+      type: "education",
+      color: "from-indigo-500 to-blue-500",
+      achievements: [
+        "Grade 9: Rank 1 (Average: 80.45)",
+        "Grade 10: Rank 3 (Average: 79.45)",
+        "Strong foundation in STEM subjects",
+      ],
+    },
+    {
+      title: "Hawassa Tabor Senior Secondary & Preparatory School",
+      period: "2011",
+      description:
+        "Completed Grade 11 and Grade 12 with strong performance in natural sciences. Ranked 5th in Grade 11 and 7th in Grade 12.",
+      icon: FaSchool,
+      type: "education",
+      color: "from-green-500 to-emerald-500",
+      achievements: [
+        "Grade 11: Rank 5 (Average: 83.5)",
+        "Grade 12: Rank 7 (Average: 75.9)",
+        "Natural Sciences Focus",
+      ],
+    },
+    {
+      title: "Wachemo University – BSc in Computer Science",
+      period: "2021 - 2024",
+      description:
+        "Graduated with Bachelor of Science in Computer Science. Achieved CGPA of 3.7 and passed National Exit Examination with 71%. Focused on software engineering, algorithms, databases, and web development.",
+      icon: FaGraduationCap,
+      type: "education",
+      color: "from-purple-500 to-pink-500",
+      achievements: [
+        "CGPA: 3.7",
+        "National Exit Examination: 71%",
+        "Graduated: July 2024",
+      ],
+    },
+    {
+      title: "Full Stack Developer",
+      period: "2023 - Present",
+      description:
+        "Building responsive web apps with Node.js, Laravel, Angular, and Tailwind. Developed admin panels, bots, and real-time systems.",
+      icon: FaBriefcase,
+      type: "professional",
+      color: "from-blue-500 to-sky-500",
+      achievements: [
+        "Developed scalable web applications",
+        "Built real-time systems",
+        "Created admin panels and bots",
+      ],
+    },
+  ];
 
   return (
     <section
@@ -106,14 +135,14 @@ const Timeline = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-purple-400 to-sky-400 transform md:-translate-x-1/2 opacity-30"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-purple-400 to-sky-400 transform -translate-x-1/2 opacity-30"></div>
 
           {/* Timeline Items */}
           <div className="space-y-12">
             {timelineData.map((item, index) => {
-              const Icon = item.icon
-              const isEven = index % 2 === 0
-              
+              const Icon = item.icon;
+              const isEven = index % 2 === 0;
+
               return (
                 <div
                   key={index}
@@ -127,26 +156,34 @@ const Timeline = () => {
                     {/* Left Side (Mobile) / Alternating Sides (Desktop) */}
                     <div
                       className={`w-full md:w-5/12 ${
-                        isEven ? 'md:mr-auto' : 'md:ml-auto md:order-2'
+                        isEven ? "md:mr-auto" : "md:ml-auto md:order-2"
                       }`}
                     >
                       <div className="bg-white dark:bg-sky-900 rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-sky-800 relative overflow-hidden group">
                         {/* Gradient Background Effect */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                        
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
+                        ></div>
+
                         <div className="relative z-10">
                           {/* Icon and Type Badge */}
                           <div className="flex items-center gap-4 mb-4">
-                            <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                            <div
+                              className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                            >
                               <Icon className="text-white text-xl" />
                             </div>
                             <div>
-                              <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                                item.type === 'professional'
-                                  ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
-                                  : 'bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300'
-                              }`}>
-                                {item.type === 'professional' ? 'Professional' : 'Education'}
+                              <span
+                                className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                                  item.type === "professional"
+                                    ? "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
+                                    : "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300"
+                                }`}
+                              >
+                                {item.type === "professional"
+                                  ? "Professional"
+                                  : "Education"}
                               </span>
                             </div>
                           </div>
@@ -185,22 +222,26 @@ const Timeline = () => {
                     </div>
 
                     {/* Center - Timeline Dot */}
-                    <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-16 h-16 flex items-center justify-center z-20">
-                      <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${item.color} border-4 border-white dark:border-sky-950 shadow-xl animate-pulse`}></div>
-                      <div className={`absolute w-6 h-6 rounded-full bg-gradient-to-br ${item.color} opacity-20 animate-ping`}></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 flex items-center justify-center z-20">
+                      <div
+                        className={`w-6 h-6 rounded-full bg-gradient-to-br ${item.color} border-4 border-white dark:border-sky-950 shadow-xl animate-pulse`}
+                      ></div>
+                      <div
+                        className={`absolute w-6 h-6 rounded-full bg-gradient-to-br ${item.color} opacity-20 animate-ping`}
+                      ></div>
                     </div>
 
                     {/* Right Side (Mobile) / Alternating Sides (Desktop) */}
                     <div
                       className={`w-full md:w-5/12 ${
-                        isEven ? 'md:ml-auto md:order-2' : 'md:mr-auto'
+                        isEven ? "md:ml-auto md:order-2" : "md:mr-auto"
                       }`}
                     >
                       {/* Empty space for alternating layout */}
                     </div>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -216,7 +257,7 @@ const Timeline = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Timeline
+export default Timeline;

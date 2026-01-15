@@ -101,7 +101,7 @@ const About = () => {
                 <div className="relative mx-auto w-64 h-64">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-sky-500 rounded-full p-1">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                      src="./programmer-line-gradient-icon-vector.jpg"
                       alt="Wondmagegn Merkeb Beleka"
                       className="w-full h-full rounded-full object-cover relative z-10 float-animation"
                     />

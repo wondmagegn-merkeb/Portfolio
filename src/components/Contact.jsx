@@ -14,19 +14,19 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: FaEnvelope,
-      text: 'eyukk426@gmail.com',
-      link: 'mailto:eyukk426@gmail.com',
+      text: 'wondmagegnmerkebbeleka@gmail.com',
+      link: 'mailto:wondmagegnmerkebbeleka@gmail.com',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: FaPhone,
-      text: '+251907363763',
-      link: 'tel:+251907363763',
+      text: '+251 977 959 9896',
+      link: 'tel:+2519779599896',
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: FaMapMarkerAlt,
-      text: 'Bahrdar, Ethiopia',
+      text: 'Hawassa, Ethiopia',
       link: '#',
       color: 'from-purple-500 to-pink-500',
     },
@@ -52,7 +52,7 @@ const Contact = () => {
     setSubmitMessage('')
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/eyukk426@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/wondmagegnmerkebbeleka@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
