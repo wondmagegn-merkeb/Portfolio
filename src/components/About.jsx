@@ -36,10 +36,10 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: FaProjectDiagram, value: "50+", label: "Projects Completed" },
-    { icon: FaUsers, value: "30+", label: "Happy Clients" },
-    { icon: FaCode, value: "5+", label: "Years Experience" },
-    { icon: FaAward, value: "20+", label: "Certifications" },
+    { icon: FaProjectDiagram, value: "30+", label: "Projects Completed" },
+    { icon: FaUsers, value: "15+", label: "Happy Clients" },
+    { icon: FaCode, value: "1+", label: "Years Experience" },
+    { icon: FaAward, value: "5+", label: "Certifications" },
   ];
 
   const highlights = [
